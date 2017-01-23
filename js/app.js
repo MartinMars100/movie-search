@@ -1,5 +1,5 @@
 'use strict';
-console.log('log version y');
+console.log('log version a');
 
 var movieSearch = (function(){
   var movie = []; // New Array literal notation
@@ -46,9 +46,9 @@ var movieSearch = (function(){
       this.year = year;
     }, // end Movie function
 
-    linktoIMDB: function(key){ // link to another site IMDB
+    linktoIMDB: function(key){ // link to IMDB site
       var locationBuild = '';
-      locationBuild += '//www.imdb.com/title/' + history.state; 
+      locationBuild += 'https://www.imdb.com/title/' + history.state; 
       // locationBuild += movie[key].id;
       window.location.href = locationBuild;
     }, // end linktoIMDB
@@ -94,7 +94,7 @@ var movieSearch = (function(){
         statusHTML += '<h3 id="ratingDetail"> IMDB Rating ' + response.Rated + '</h3>';
         statusHTML += '<h3 id="plotSynopsis">Plot Synopsis</h3>';
         statusHTML += '<h3 id="plotDetail">' + response.Plot + '</h3>';
-        statusHTML += '<h3 id="button-toIMDB" onclick = movieSearch.linktoIMDB('+ key + ')>View on IMDB</h3>';
+        statusHTML += '<h3 id="button-toIMDB" onclick = movieSearch.linktoIMDB()>View on IMDB</h3>';
         statusHTML += '</div></div>';
         $('body').append(statusHTML);
       });
