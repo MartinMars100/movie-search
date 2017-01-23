@@ -12,9 +12,14 @@ Cross Browser Compatibility results are below:
 No Problems Noted:
   Browser                       Tool Used
   ----------------              -----------
-  
+Safari 9.1.2                     My iMac
+Opera 36                         Browserling
+Mozilla Firefox 49               Browserling
+Chrome 53                        My Chromebook browser
+IE 11                            Net Renderer
+
 
 Problems Noted:
   Browser                       Tool Used        Problems Found:
   ----------------              -----------      ---------------
-  
+  IE 9                        Browserling     Search field and buttons not appearing

@@ -10,7 +10,8 @@ body {
   font: 1em/1.5 'Roboto', sans-serif;
   color: #222;
   background: #f6f7f7;
-  padding-top: 145px;
+  /*padding-top: 145px;*/
+  padding-top: 80px;
   padding-bottom: 3em;
   margin: 0;
 }
@@ -192,6 +193,180 @@ button {
   width: 1px;
 }
 
+/* ==========================================================
+Columns - 1000px overall - Col are 65px wide -
+gutters are 20px wide - See Gridulator website for calculations
+=============================================================*/
+  
+    .grid-1 {
+      width: 6.5%
+    }
+    .grid-2 {
+      width: 15%
+    }
+    .grid-3 { 
+      width: 23.5% 
+    }
+    .grid-4 { 
+      width: 32%; 
+    }
+    .grid-5 { 
+      width: 40.5% 
+    }
+    .grid-6 { 
+      width: 49% 
+    }
+    .grid-7 { 
+      width: 57.5% 
+    }
+    .grid-8 { 
+      width: 66% 
+    }
+     .grid-9 { 
+      width: 74.5% 
+    }
+     .grid-10 { 
+      width: 83% 
+    }
+     .grid-11 { 
+      width: 91.5% 
+    }
+     .grid-12 { 
+      width: 100% 
+    }
+
+/* ================================= 
+  Movie Detail Styling
+==================================== */
+.grid-container {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+.main-logo {
+  margin-top: 0;
+  margin-bottom: 20%;
+  /*font-size: 1.5em;  */
+  font-size: 1em;  
+}
+.main-logo a,
+.main-nav a {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+}
+
+.main-logo a {
+  /*background-color: #5fcf80;*/
+}
+
+.main-nav a {
+  /*background-color: #3f8abf;*/
+}
+
+.main-header2 {
+  width: 100%;
+  height: 20%;
+  /*max-height: 250px;*/
+  /*The following was on header in Haus Therapist 1 */
+  /*padding-top: 10px;*/
+  padding-top: 7%;
+  padding-bottom: 10px;
+  background-color: #22272b;
+  background-size: 20em 20em;
+  /*margin-top: 2%;*/
+ }
+ 
+.main-nav {
+ text-align: left;
+}
+
+.main-nav li {
+  /*margin-top: 6px;*/
+  margin-left: 10px;
+  display: inline-block;
+}
+
+
+
+#col-1 {
+  margin-top: -15%;
+  }
+
+#col-2 {
+  margin-top: -17%;
+  }
+
+.desc-movie-poster {
+    display: inline-block;
+    width: 80%;
+    min-height: 50%;
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    margin-left: 10%;
+    border: 10px solid white;
+  } 
+  
+#titleDetail {
+  margin-bottom: 0;
+  color: white;
+}
+  
+button2 {
+  width: 80px;
+  height: 55px;
+  border: 0;
+  background: none;
+  outline: 0;
+  position: relative;
+  /*z-index: 2000;*/
+}
+
+#ratingDetail {
+  margin-top: 0;
+  font-size: .75em;
+  font-weight: normal;
+  color: white;
+}
+
+#plotSynopsis{
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#plotDetail {
+  margin-top: 0;
+  font-size: .75em;
+  font-weight: normal;
+}
+
+
+#button-toIMDB {
+  font-size: .65em;
+  display:block;
+  font-weight: lighter;
+	color: white;
+  border: 3px solid black;
+  background-color: #1c1c1c;
+  padding: 3%;
+  /*height: 7%;*/
+  width: 30%;
+  margin: 2% 0 0 0;
+  text-align: center;
+  border-radius: 10%;
+}
+
+h3 a {
+  color: white;
+}
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -209,7 +384,7 @@ button {
     width: 50%;
   }
 
-  .movie-list .desc {
+  .movie-list .desc .no-movies {
     width: 100%;
     float: none;
   }
@@ -235,12 +410,27 @@ button {
  .movie-title {
     padding-right: 1.25em;
  }
+}
 
+@media (min-width: 475px)  and (max-width: 680px) {
+  #col-2 {
+    margin-top: -23%;
+  }
+  #plotSynopsis {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 745px) {
+  #plotSynopsis {
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 769px) {
   body {
-    padding-top: 115px;
+    /*padding-top: 115px;*/
   }
 
   .main-title {
@@ -255,6 +445,17 @@ button {
 
   .movie-list li {
     width: 33.333333333%;
+  }
+  
+  .main-header2 {
+    padding: 0;
+  }
+}
+
+@media (min-width: 860px) {
+  #plotSynopsis {
+    margin-top: 4em;
+    margin-bottom: 0;
   }
 }
 
@@ -271,5 +472,12 @@ button {
 
   .movie-list li:nth-of-type(4n+1) {
     clear: left;
+  }
+}
+
+@media (min-width: 1220px) {
+  #plotSynopsis {
+    margin-top: 6em;
+    margin-bottom: 0;
   }
 }

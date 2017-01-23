@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Movie Search</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="main-header">
+  <div class="main-header" id="main-header">
     <div class="inner">
       <h1 class="main-title">MovieSearch</h1>
       <form class="search-form">
@@ -30,12 +31,40 @@
     </div>   
   </div>
 
-  <div class="main-content clearfix">
-    <ul id="movies" class="movie-list">
-      <li class="desc">
-        <i class="material-icons icn-movie">movie</i>
-        Search movie titles and TV shows
-      </li>
+  <!--<div class="main-content clearfix" id="main">-->
+  <!--  <ul id="movies">-->
+  <!--    <li class="desc">-->
+  <!--      <i class="material-icons icn-movie">movie</i>-->
+  <!--      Search movie titles and TV shows-->
+  <!--    </li>-->
+      
+   <!-- =============================   
+    <div class="grid-container" class="main-header2> 
+      <h1 class="grid-2 main-logo"><a href="#"><i class="material-icons icn-search">keyboard_arrow_left</i></a></h1>
+      <h1 class="grid-2 main-logo"><a href="#"><i class="material-icons icn-search">search</i>Logo</a></h1>
+      <ul class="grid-8 main-nav">
+        <li><a href=”#”>Link 1</a></li>
+        <li><a href=”#”>Link 2</a></li>
+        <li><a href=”#”>Link 3</a></li>
+        <li><a href=”#”>Link 4</a></li>
+      </ul> 
+    </div>
+    
+    <div class="grid-container" id = "movieDetail">
+      <div class="grid-4">
+        <img class="desc-movie-poster" src="http://ia.media-imdb.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg">
+      </div>
+      <div class="grid-7" id="col-2>
+        <h2 id="titleDetail"></h2>
+        <h2 id="ratingDetail"></h2> 
+        <span>Plot Synopsis</span>
+        <h3 class="plotDetail></h3>
+        <h3 id ="button-toIMDB">View on IMDB</h3>
+        </div>
+      </div>
+    </div>  
+    ================================= -->  
+    
     <!-- ===============================================================
       1- Example HTML you'll need to dynamically create with JavaScript. 
          Each result should generate a '<li>'. 
@@ -71,8 +100,8 @@
           </li> 
         -->
 
-    </ul> 
-  </div>
+  <!--  </ul> -->
+  <!--</div>-->
 
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="js/app.js"></script>
